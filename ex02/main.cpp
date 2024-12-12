@@ -1,4 +1,5 @@
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main( void )
 {
@@ -6,6 +7,7 @@ int main( void )
 	ClapTrap hermione("Hermione");
 	ClapTrap ron("Ron");
 	ScavTrap hagrid("Hagrid");
+	FragTrap snape("Pr. Snape");
 
 	harry.attack("Voldemort");
 	harry.attack("Malfoy");
@@ -19,5 +21,9 @@ int main( void )
 	hagrid.takeDamage(99);
 	hagrid.beRepaired(50);
 	hagrid.guardGate();
+	snape.attack("Voldemort");
+	snape.takeDamage(99);
+	snape.beRepaired(50);
+	snape.highFivesGuys();
 	return (0); 
 }
