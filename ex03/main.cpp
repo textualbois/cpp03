@@ -1,13 +1,15 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main( void )
 {
-	ClapTrap harry("Harry");
-	ClapTrap hermione("Hermione");
-	ClapTrap ron("Ron");
-	ScavTrap hagrid("Hagrid");
-	FragTrap snape("Pr. Snape");
+	ClapTrap	harry("Harry");
+	ClapTrap	hermione("Hermione");
+	ClapTrap	ron("Ron");
+	ScavTrap	hagrid("Hagrid");
+	FragTrap	snape("Pr. Snape");
+	DiamondTrap	luna("Luna");
 
 	harry.attack("Voldemort");
 	harry.attack("Malfoy");
@@ -25,5 +27,12 @@ int main( void )
 	snape.takeDamage(99);
 	snape.beRepaired(50);
 	snape.highFivesGuys();
+	luna.attack("Draco");
+	luna.takeDamage(5);
+	luna.beRepaired(3);
+	luna.guardGate();
+	luna.highFivesGuys();
+	luna.whoAmI();
+
 	return (0); 
 }
