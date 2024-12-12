@@ -7,7 +7,7 @@ ClapTrap::ClapTrap() : _name("ClapTrap"), _hit_points(10), _energy_points(10), _
 	std::cout << _name << " default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string const & name)
+ClapTrap::ClapTrap(const std::string& name)
 	:	_name(name),
 		_hit_points(10),
 		_energy_points(10),
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(std::string const & name)
 	std::cout << _name << " was constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const & otherClapTrap)
+ClapTrap::ClapTrap(const ClapTrap& otherClapTrap)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = otherClapTrap;
@@ -29,7 +29,7 @@ ClapTrap::~ClapTrap()
 
 // operator overloads //
 
-ClapTrap&	ClapTrap::operator=(ClapTrap const & otherClapTrap)
+ClapTrap&	ClapTrap::operator=(const ClapTrap& otherClapTrap)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	if (this != &otherClapTrap)
@@ -44,7 +44,7 @@ ClapTrap&	ClapTrap::operator=(ClapTrap const & otherClapTrap)
 
 // member functions //
 
-void	ClapTrap::attack(const std::string & target)
+void	ClapTrap::attack(const std::string& target)
 {
 	if (_hit_points <= 0)
 		std::cout << "ClapTrap " << _name << " is dead and cannot attack " << target << std::endl;
